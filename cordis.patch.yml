@@ -1,0 +1,9 @@
+# dsh-app-panel bundle patch: inserts the dual-face plugin row into whichever
+# profile loads this bundle. The node half (exports ".") discovers the apps
+# this machine has wired up, stores the per-session on/off selection, and
+# applies it with @deepseek-ai/dsh-tools' per-agent tool restriction; the
+# browser half (exports "./client", served at /plugins/<id>/client.js) draws
+# the right-sidebar panel.
+- insert:
+    - id: app-panel
+      name: 'dsh-app-panel'
